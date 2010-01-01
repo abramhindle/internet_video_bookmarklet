@@ -1,0 +1,123 @@
+javascript:if(!document.getElementById('download-youtube-video')){
+	var%20video_id=null;
+	var%20video_hash=null;
+	var%20video_player=document.getElementById('movie_player');
+	if(video_player){
+	var%20flash_variables=video_player.attributes.getNamedItem('flashvars');
+	if(flash_variables){
+	var%20flash_values=flash_variables.value;
+	if(flash_values){
+	var%20video_id_match=flash_values.match(/[^a-z]video_id=([^(\&|$)]*)/);
+	if(video_id_match!=null)video_id=video_id_match[1];
+	var%20video_hash_match=flash_values.match(/[^a-z]t=([^(\&|$)]*)/);
+	if(video_hash_match!=null)video_hash=video_hash_match[1]}}}if(video_id==null||video_hash==null){
+	var%20args=null;
+	try{
+	args=yt.getConfig('SWF_ARGS')}catch(e){
+	}if(args){
+	video_id=args['video_id'];
+	video_hash=args['t']}}if(video_id!=null&&video_hash!=null){
+	var%20div_embed=document.getElementById('watch-embed-div');
+	if(div_embed){
+	var%20div_download=document.createElement('div');
+	var%20div_download_code='%3Cbr%20/%3E%3Cspan%20id=\'download-youtube-video\'%3E%3Ca%20href=\''+'http://www.youtube.com/get_video?fmt=18&video_id='+video_id+'&t='+video_hash+'\'%20onclick=\'blur(this);
+	\'%3EDownload%20as%20MP4%3C/a%3E';
+	try{
+	if(yt.getConfig('IS_HD_AVAILABLE'))div_download_code=div_download_code+'%20|%20%3Ca%20href=\''+'http://www.youtube.com/get_video?fmt=22&video_id='+video_id+'&t='+video_hash+'\'%20onclick=\'blur(this);
+	\'%3EDownload%20as%20MP4%20HD%3C/a%3E'}catch(e){
+	}div_download.innerHTML=div_download_code+'%3C/span%3E';
+	div_embed.appendChild(div_download)}}}void(0)
+
+
+javascript:if(!document.getElementById('download-youtube-video')){
+	var%20video_id=null;
+	var%20video_hash=null;
+	var%20video_player=document.getElementById('movie_player');
+	if(video_player){
+		var%20flash_variables=video_player.attributes.getNamedItem('flashvars');
+		if(flash_variables){
+			var%20flash_values=flash_variables.value;
+			if(flash_values){
+			var%20video_id_match=flash_values.match(/[^a-z]video_id=([^(\&|$)]*)/);
+			if(video_id_match!=null)video_id=video_id_match[1];
+			var%20video_hash_match=flash_values.match(/[^a-z]t=([^(\&|$)]*)/);
+			if(video_hash_match!=null)video_hash=video_hash_match[1]}
+		}
+	}
+	if(video_id==null||video_hash==null){
+		var%20args=null;
+		try{
+			args=yt.getConfig('SWF_ARGS')}
+		catch(e){}
+		if(args){
+			video_id=args['video_id'];
+			video_hash=args['t']
+		}
+	}
+	alert("ok");
+	if(video_id!=null&&video_hash!=null){
+		var%20div_download_code='http://www.youtube.com/get_video?fmt=18&video_id='+video_id+'&t='+video_hash;
+		try{
+		if(yt.getConfig('IS_HD_AVAILABLE'))div_download_code='http://www.youtube.com/get_video?fmt=22&video_id='+video_id+'&t='+video_hash;}
+	catch(e){
+		}
+		document.execCommand('SaveAs',true,div_download_code);
+	} else {
+		alert("Not_a_valid_video?");
+	}
+}
+void(0)
+
+s/\t/%20%20%20%20/g;
+s/ /%20/g;
+s/\r/%20/g;
+javascript:if(!document.getElementById('download-youtube-video')){%20%20%20%20%20var%20video_id=null;%20%20%20%20%20var%20video_hash=null;%20%20%20%20%20var%20video_player=document.getElementById('movie_player');%20%20%20%20%20if(video_player){%20%20%20%20%20%20%20%20%20var%20flash_variables=video_player.attributes.getNamedItem('flashvars');%20%20%20%20%20%20%20%20%20if(flash_variables){%20%20%20%20%20%20%20%20%20%20%20%20%20var%20flash_values=flash_variables.value;%20%20%20%20%20%20%20%20%20%20%20%20%20if(flash_values){%20%20%20%20%20%20%20%20%20%20%20%20%20var%20video_id_match=flash_values.match(/[^a-z]video_id=([^(\&|$)]*)/);%20%20%20%20%20%20%20%20%20%20%20%20%20if(video_id_match!=null)video_id=video_id_match[1];%20%20%20%20%20%20%20%20%20%20%20%20%20var%20video_hash_match=flash_values.match(/[^a-z]t=([^(\&|$)]*)/);%20%20%20%20%20%20%20%20%20%20%20%20%20if(video_hash_match!=null)video_hash=video_hash_match[1]}%20%20%20%20%20%20%20%20%20}%20%20%20%20%20}%20%20%20%20%20if(video_id==null||video_hash==null){%20%20%20%20%20%20%20%20%20var%20args=null;%20%20%20%20%20%20%20%20%20try{%20%20%20%20%20%20%20%20%20%20%20%20%20args=yt.getConfig('SWF_ARGS')}%20%20%20%20%20%20%20%20%20catch(e){}%20%20%20%20%20%20%20%20%20if(args){%20%20%20%20%20%20%20%20%20%20%20%20%20video_id=args['video_id'];%20%20%20%20%20%20%20%20%20%20%20%20%20video_hash=args['t']%20%20%20%20%20%20%20%20%20}%20%20%20%20%20}%20%20%20%20%20if(video_id!=null&&video_hash!=null){%20%20%20%20%20%20%20%20%20var%20div_download_code='http://www.youtube.com/get_video?fmt=18&video_id='+video_id+'&t='+video_hash;%20%20%20%20%20%20%20%20%20try{%20%20%20%20%20%20%20%20%20if(yt.getConfig('IS_HD_AVAILABLE'))div_download_code='http://www.youtube.com/get_video?fmt=22&video_id='+video_id+'&t='+video_hash;}%20%20%20%20%20catch(e){%20%20%20%20%20%20%20%20%20}%20%20%20%20%20%20%20%20%20document.execCommand('SaveAs',true,div_download_code);%20%20%20%20%20}%20else%20{%20%20%20%20%20%20%20%20%20alert("Not_a_valid_video?");%20%20%20%20%20}%20}%20void(0)%20
+
+
+This works:
+javascript:if(/vimeo/.test(window.location.href)){
+window.location.href='http://vimeo.aliz.es/vimeo.pl/'+window.location.href;
+}
+else
+if(!document.getElementById('download-youtube-video')){
+	var%20video_id=null;
+	var%20video_hash=null;
+	var%20video_player=document.getElementById('movie_player');
+	if(video_player){
+		var%20flash_variables=video_player.attributes.getNamedItem('flashvars');
+		if(flash_variables){
+			var%20flash_values=flash_variables.value;
+			if(flash_values){
+			var%20video_id_match=flash_values.match(/[^a-z]video_id=([^(\&|$)]*)/);
+			if(video_id_match!=null)video_id=video_id_match[1];
+			var%20video_hash_match=flash_values.match(/[^a-z]t=([^(\&|$)]*)/);
+			if(video_hash_match!=null)video_hash=video_hash_match[1]}
+		}
+	}
+	if(video_id==null||video_hash==null){
+		var%20args=null;
+		try{
+			args=yt.getConfig('SWF_ARGS')}
+		catch(e){}
+		if(args){
+			video_id=args['video_id'];
+			video_hash=args['t']
+		}
+	}
+	if(video_id!=null&&video_hash!=null){
+		var%20div_download_code='http://www.youtube.com/get_video?fmt=18&video_id='+video_id+'&t='+video_hash;
+		try{
+		if(yt.getConfig('IS_HD_AVAILABLE'))div_download_code='http://www.youtube.com/get_video?fmt=22&video_id='+video_id+'&t='+video_hash;}
+	catch(e){
+		};
+		document.location=div_download_code;
+	} else {
+		alert("Not_a_valid_video?");
+	}
+}
+void(0)
+
+
+
+
+javascript:if(/vimeo/.test(window.location.href)){%20window.location.href='http://vimeo.aliz.es/vimeo.pl/'+window.location.href;%20}%20else%20if(!document.getElementById('download-youtube-video')){%20%20var%20video_id=null;%20%20var%20video_hash=null;%20%20var%20video_player=document.getElementById('movie_player');%20%20if(video_player){%20%20%20var%20flash_variables=video_player.attributes.getNamedItem('flashvars');%20%20%20if(flash_variables){%20%20%20%20var%20flash_values=flash_variables.value;%20%20%20%20if(flash_values){%20%20%20%20var%20video_id_match=flash_values.match(/[^a-z]video_id=([^(\&|$)]*)/);%20%20%20%20if(video_id_match!=null)video_id=video_id_match[1];%20%20%20%20var%20video_hash_match=flash_values.match(/[^a-z]t=([^(\&|$)]*)/);%20%20%20%20if(video_hash_match!=null)video_hash=video_hash_match[1]}%20%20%20}%20%20}%20%20if(video_id==null||video_hash==null){%20%20%20var%20args=null;%20%20%20try{%20%20%20%20args=yt.getConfig('SWF_ARGS')}%20%20%20catch(e){}%20%20%20if(args){%20%20%20%20video_id=args['video_id'];%20%20%20%20video_hash=args['t']%20%20%20}%20%20}%20%20if(video_id!=null&&video_hash!=null){%20%20%20var%20div_download_code='http://www.youtube.com/get_video?fmt=18&video_id='+video_id+'&t='+video_hash;%20%20%20try{%20%20%20if(yt.getConfig('IS_HD_AVAILABLE'))div_download_code='http://www.youtube.com/get_video?fmt=22&video_id='+video_id+'&t='+video_hash;}%20%20catch(e){%20%20%20};%20%20%20document.location=div_download_code;%20%20}%20else%20{%20%20%20alert("Not_a_valid_video?");%20%20}%20}%20void(0)%20
